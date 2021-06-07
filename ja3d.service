@@ -1,0 +1,12 @@
+[Unit]
+Description=ja3d
+After=network.target remote-fs.target nss-lookup.target systemd-journald-dev-log.socket
+Before=multi-user.target exim4.service
+Conflicts=shutdown.target
+
+[Service]
+ExecStart=/root/ja3-python/bin/python /root/ja3-python/ja3d.py -s /dev/shm/ja3.sock -i lin0
+Restart=always
+
+[Install]
+WantedBy=multi-user.target exim4.service

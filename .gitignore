@@ -1,0 +1,8 @@
+.p3env
+*.pyc
+bin
+include
+lib
+local
+share
+__pycache__
